@@ -1,4 +1,5 @@
 # Jenga_Game
+[![License](https://img.shields.io/packagist/l/doctrine/orm.svg)](LICENSE)
 
 Initialize the jenga poses.
 
