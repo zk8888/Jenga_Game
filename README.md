@@ -11,7 +11,7 @@ Initialize the jenga poses.
 ## Example
 See cmake.
 
-Then you would see:
+Run and see:
 
 ![Demo](https://github.com/zk8888/Jenga_Game/raw/master/resource/demo.png)
 
