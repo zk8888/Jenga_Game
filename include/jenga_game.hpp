@@ -123,6 +123,15 @@ public:
     }
 
     /**
+     *
+     */
+    PCPtr getSmallModel() {
+        PCPtr tempPC(new PC);
+        pcl::copyPointCloud(*JengaModel, *tempPC);
+        return tempPC;
+    }
+
+    /**
      * get passed points
      * @return
      */
@@ -255,6 +264,7 @@ private:
 
     // a point cloud with each simulate small jenga vertexs(8 vertexs)
     PCPtr JengaVertex;
+    // small jenga dense point cloud
     PCPtr JengaModel;
     // a point cloud with all unregistered simulate small jenga centers
     PCPtr initCenCloud;

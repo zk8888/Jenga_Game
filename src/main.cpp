@@ -44,6 +44,7 @@ int main(int argc, char* argv[]) {
 
     pcl::PointCloud<pcl::PointXYZRGB>::Ptr capColorCloud(new pcl::PointCloud<pcl::PointXYZRGB>);
     PCPtr bigJengaPC(new PC);
+    PCPtr smallJengaPC(new PC);
     PCPtr worldJengaCloud(new PC);
     PCPtr CenterPoint(new PC);
     PCPtr initCenterPoint(new PC);
@@ -61,6 +62,7 @@ int main(int argc, char* argv[]) {
     modelVertexPose = j_game.getJengaVertex();
     j_game.regisPointCloud(capColorCloud, CenterPoint);
     bigJengaPC = j_game.getModel();
+    smallJengaPC = j_game.getSmallModel();
     worldJengaCloud = j_game.getCloudSegUnique();
     testPoint = j_game.getCloudPassed();
     icpTrans = j_game.getModeltoWorldTrans();
@@ -184,6 +186,13 @@ int main(int argc, char* argv[]) {
     vector<PC > frameClouds;
     double rotate_angle = 0;
     bool getFitInitPose = false;
+
+    // view one of small jenga
+    pcl::transformPointCloud(*smallJengaPC, *smallJengaPC, icpTrans * eachMatrix[0]);
+    pcl::visualization::PointCloudColorHandlerCustom<PointT> small_jenga_cloud_color(smallJengaPC,
+                                                                                 250, 0, 0);
+    test_view->addPointCloud(smallJengaPC, small_jenga_cloud_color, "small_jenga_cloud", v1);
+
     test_view->spin();
 
 //    while(!viewer->wasStopped()){
