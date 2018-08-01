@@ -32,6 +32,6 @@ add_definitions(${OpenCV_DEFINITIONS})
 add_definitions(${OpenMesh_DEFINITIONS})
 
 add_executable (jenga src/main.cpp src/jenga_game.cpp
-        include/jenga_game.hpp src/mesh_sampling.cpp include/k2g.hpp)
+        include/jenga_game.hpp src/mesh_sampling.cpp)
 target_link_libraries (jenga ${PCL_LIBRARIES} ${freenect2_LIBRARIES} ${OpenCV_LIBS} ${BOOST_LIBS} OpenMeshCore
         OpenMeshTools)
