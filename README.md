@@ -10,7 +10,7 @@ Initialize the jenga poses.
 ## Example
 See cmake.
 
-![Demo:](http://github.com/zk8888/Jenga_Game/blob/master/resource/demo.png)
+http://github.com/zk8888/Jenga_Game/blob/master/resource/demo.png
 
 
 
