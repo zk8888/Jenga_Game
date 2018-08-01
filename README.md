@@ -10,7 +10,8 @@ Initialize the jenga poses.
 ## Example
 See cmake.
 
-Then this would be show:
+Then you would see:
+
 ![Demo](https://github.com/zk8888/Jenga_Game/raw/master/resource/demo.png)
 
 Note: This is a demo from one frame to initialize poses. Actually, it can be 
