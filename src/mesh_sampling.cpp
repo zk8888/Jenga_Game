@@ -1,4 +1,3 @@
-//https://github.com/PointCloudLibrary/pcl/blob/master/tools/mesh_sampling.cpp
 /*
 * Software License Agreement (BSD License)
 *
